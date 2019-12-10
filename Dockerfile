@@ -31,9 +31,9 @@ RUN chmod 777 /run/httpd
 RUN chmod 777 /var/log/httpd
 ADD httpd.conf /etc/httpd/conf/httpd.conf
 ADD index.html /var/www/html/index.html
-ADD index.cgi /var/www/cgi-bin/index.cgi
+ADD add.cgi /var/www/cgi-bin/add.cgi
 RUN chmod 766 /var/www/html/index.html
-RUN chmod 755 /var/www/cgi-bin/index.cgi
+RUN chmod 755 /var/www/cgi-bin/add.cgi
 
 # CGI scripts go to /opt/rh/httpd24/root/var/www/cgi-bin/
 #ADD share/cgi-bin ${HTTPD_DATA_ORIG_PATH}/cgi-bin/
